@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<jsp:include page="/jsp/common/head.jsp"></jsp:include>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -21,6 +21,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+        <div class="right">
+        <img class="wColck" src="${pageContext.request.contextPath }/images/clock.jpg" alt=""/>
+        <div class="wFont">
+            <h2>${userSession.userName }</h2>
+            <p>欢迎来到超市订单管理系统!</p>
+        </div>
+    </div>
+</section>
+<jsp:include page="/jsp/common/foot.jsp"></jsp:include>
   </body>
 </html>
